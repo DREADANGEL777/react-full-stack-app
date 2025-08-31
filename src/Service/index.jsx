@@ -39,11 +39,11 @@ export const downvote = (id) => {
 export const checkIsAlreadyUpVoted = (id) => {
   const votes = JSON.parse(localStorage.getItem("votes"))
 
-  return votes.upvotes.find((item) => item == id)
+  return votes?.upvotes?.find((item) => item == id)
 }
 
 export const checkIsAlreadyDownVoted = (id) => {
   const votes = JSON.parse(localStorage.getItem("votes"))
 
-  return votes.downvotes.find((item) => item == id)
+  return votes?.downvotes?.find((item) => item == id)
 }
